@@ -13,6 +13,19 @@ ALTER INDEX index_name REBUILD;
 ```
 -----
 - Visible and Invisible Indexes
+
+An invisible index is an index that is maintained by the database but ignored by the optimizer unless explicitly specified.  The invisible index is an alternative to dropping or making an index unusable.  This feature is also functional when certain modules of an application require a specific index without affecting the rest of the application.
+Make the index invisible
+``` sql
+ALTER INDEX schema_name.index_name INVISIBLE;
+``` 
+Make the index visible
+``` sql
+ALTER INDEX schema_name.index_name VISIBLE;
+``` 
+
+Use Case : Help in performance, We want to drop the index from the production server but we did not know the effect after drop. Table having large in size if we need to create again the dropped index then we need large time. So, plan to make the index invisible for time period if our environment need the index we will make it visible by alter its property.
+
 -----
 - Types of Indexes
 	- B-Tree Index
