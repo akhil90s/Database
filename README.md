@@ -6,13 +6,13 @@
 
 Indexes are non-usable during some data-load or batch process. Orcale optimizer doesn't update the index only after we rebuild it. This reduces not required I/O operation.
 ``` sql
-ALTER INDEX index_sales_id UNUABLE;
+ALTER INDEX index_name UNUABLE;
 ```
 ``` sql
-ALTER INDEX index_sales_id REBUILD;
+ALTER INDEX index_name REBUILD;
 ```
 -----
-- Visible and Non-Visible Indexes
+- Visible and Invisible Indexes
 -----
 - Types of Indexes
 	- B-Tree Index
