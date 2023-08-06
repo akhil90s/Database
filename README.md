@@ -3,6 +3,10 @@
 ### Indexes
 
 - Usable and Non-Usable Indexes
+
+Indexes are Spawning made to non-usable during some data-load or batch process. Orcale optimizer doesn't update the index only after we rebuild it. This reduces not required I/O operation.
+`ALTER INDEX index_sales_id UNUABLE;`
+`ALTER INDEX index_sales_id REBUILD;`
 -----
 - Visible and Non-Visible Indexes
 -----
