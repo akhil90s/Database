@@ -3,7 +3,7 @@
 ### Indexes
 
 - Usable and Non-Usable Indexes
-======
+-----
 - Visible and Non-Visible Indexes
 ======
 - Types of Indexes
